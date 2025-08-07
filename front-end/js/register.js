@@ -19,6 +19,7 @@ document.getElementById("register-form").addEventListener("submit", async (e) =>
     const result = await res.json();
     alert(result.message || "Inscription réussie !");
     console.log("Inscription réussie")
+    window.location.href = "login.html"
   } catch (err) {
     alert("Erreur lors de l'inscription");
   }
