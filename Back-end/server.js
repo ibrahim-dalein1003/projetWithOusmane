@@ -13,7 +13,9 @@ connectDB();
 
 app.use(helmet());
 app.use(cors({
-  origin : "https://projet-frontend-0c2l.onrender.com"
+  origin : "https://projet-frontend-0c2l.onrender.com",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
 }));
 app.use(express.json());
 
