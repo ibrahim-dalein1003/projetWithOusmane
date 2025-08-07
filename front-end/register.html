@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inscription</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <h2>Inscription</h2>
+      <form id="register-form">
+        <input type="text" name="name" placeholder="Nom" required />
+        <input type="text" name="prenom" placeholder="Prenom" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <select name="role" required>
+          <option value="user" selected>Utilisateur</option>
+          <option value="admin">Administrateur</option>
+        </select>
+
+        <input
+          type="password"
+          name="password"
+          placeholder="Mot de passe"
+          required
+        />
+        <button type="submit">S'inscrire</button>
+      </form>
+    </div>
+    <script src="./js/api.js" defer></script>
+    <script src="./js/forgot-password.js" defer></script>
+  </body>
+</html>
