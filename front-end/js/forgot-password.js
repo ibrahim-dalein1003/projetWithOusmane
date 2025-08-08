@@ -11,6 +11,7 @@ document.getElementById("forgot-form").addEventListener("submit", async (e) => {
     });
 
     const result = await res.json();
+    if(res.ok) return window.location.href = "dashboard.html";
     alert(result.message || "Si cet email existe, un lien vous a été envoyé");
   } catch (err) {
     alert("Erreur lors de la demande");
