@@ -46,8 +46,10 @@ exports.forgotPassword = async (req, res) => {
   await user.save({validateBeforeSave: false});
 
   // Pour la démo, on affiche juste le lien dans la console :
-  // console.log(`Lien de réinitialisation : http://localhost:3000/api/auth/reset-password/${resetToken}`);
-  console.log(`Lien de réinitialisation : http://127.0.0.1:3000/api/auth/reset-password/token=${resetToken}`);
+  // console.log(`Lien de réinitialisation : http://localhost:3000/api/auth/reset-password/token=${resetToken}`);
+
+  const frontendUrl = `https://projet-frontend-ib.onrender.com/reset-password.html?token=${resetToken}`;
+  console.log(`Lien de réinitialisation : ${frontendUrl}`);
 
 
   res.json({ message: 'Lien de réinitialisation envoyé (voir console)' });
